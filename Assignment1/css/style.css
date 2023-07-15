@@ -1,0 +1,289 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #ffffff;
+}
+
+.header{
+    display: flex;  
+    flex-direction: row;
+    background-color: #ffffff;
+}
+
+.logo img{
+    width: 60px;
+    margin: 8px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+    
+.header ul{
+    display: flex;
+    list-style: none;
+    margin: 20px;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+ul li a{
+    color: #000;
+    text-decoration: none;
+    padding: 5px 20px;
+    padding-top: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+
+
+.nav{
+    display: flex;
+    
+}
+
+
+
+
+.menu li img{
+    width: 30px;
+    margin-top: -7px;
+    padding-right: -10px;
+}
+
+.cart{
+    margin-left: 100px;
+}
+
+.menu ul input{
+    width: 430px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: -9px;
+    margin-left: 50px;
+}
+
+
+
+
+/* Slider logic */
+
+.slider-container {
+    background: linear-gradient(149deg, rgb(247, 0, 255) 0%, rgb(255, 145, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.slider {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.slide:nth-of-type(even) {
+    background-color: rgb(250, 246, 212);
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+    scroll-snap-align: center;
+}
+
+.slide__text {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.slide a {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+a.slide__prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+}
+
+a.slide__next{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+}
+
+.slider {
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide a {
+    background: none;
+    border: none;
+}
+
+a.slide__prev,
+.slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slide__text img{
+    width: 100%;
+    height: 50%;
+}
+
+.offers_{
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.offers__ img{
+    width: 153px;
+}
+
+h1{
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+/* Items logic */
+
+.items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    margin-top: 50px;
+    list-style: none;
+}
+
+
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    list-style: none;
+}
+
+#discount1{
+    color: red;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info{
+    padding-left: 30px;
+}
+
+.item img{
+    width:300px;
+}
+
+.item{
+    display: block;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+
+
+
+
+.item :hover{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.price :hover{
+    padding: 0px;
+}
+
+.price p :hover{
+    padding: 0px;
+    margin: 0px;
+}
+
