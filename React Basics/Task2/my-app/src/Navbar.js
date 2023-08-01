@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import './Navbar.css';
-import logo from './images/logo.png'; // Tell webpack this JS file uses this image
+import logo from ''; // Tell webpack this JS file uses this image
 export default class Navbar extends Component {
     render() {
         return (
             <div className="nav_contain">
                 <div class="logo">
-                    <img src={logo} alt="logo"/>
+                    
                 </div>
                 <div class="menu">
                     <ul>
