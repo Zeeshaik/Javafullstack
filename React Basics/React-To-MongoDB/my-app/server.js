@@ -1,34 +1,51 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-// const devuser = require('./devusermodel');
+const devuser=require('./devusermodel')
+mongoose.connect("mongodb+srv://zeesh:zeesh@cluster0.6y8dgvf.mongodb.net/").then(
+    () => console.log("DB Connected")
+)
 
+app.use(express.json())
 
+app.get('/data',async (req,res) =>{
+    
+  try{
+      const{fullname,email,mobile,skill,password,confirmpassword} = req.body;
+      const exist = await devuser.find();
+      return res.send(exist)
+      
+  }
+  catch(err){
+      console.log('Error');
+      return res.status(500).send('Server Error')
 
-// Replace 'my-database' with the name of your MongoDB database
-const uri = 'mongodb://127.0.0.1:27017/c1';
+  }
+}
+)
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((error) => {
-    console.error('Error connecting to MongoDB:', error.message);
-  });
-
-  app.get('/', (req, res) => {
-    return res.send('Received a GET HTTP method');
-  })
-
-  app.post('register', async (req, res) => {
+app.post('/register',async(req,res)=>{
     try{
-        const {name, email, password} = req.body;
+    const{fullname,email,mobile,skill,password,confirmpassword}=req.body;
+    const exist= await devuser.findOne({email});
+    if(exist){
+        return res.statusCode(400).send('user already exist')
+    }
+    if(password!=confirmpassword){
+        return res.statusCode(403).send('Invalid Password')
+    }
+
+    let newUser=new devuser({
+        fullname,email,skill,mobile,password,confirmpassword
+    })
+    newUser.save();
+    return res.status(200).send('User Registered Sucessfully');
     }
     catch(err){
-        console.log(err);
-        return res.status(500).send("Internal Server Error")
+        console.log('err');
+        return res.status(500).send('Server error')
     }
-  })
+}
+)
 
-
-app.listen(5000, ()=> console.log('Server is running on port 5000'));
+app.listen(5000,()=> console.log('Server Running'))
