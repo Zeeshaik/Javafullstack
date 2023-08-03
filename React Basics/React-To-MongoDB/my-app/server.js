@@ -48,4 +48,18 @@ app.post('/register',async(req,res)=>{
 }
 )
 
+app.delete('/delete/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    // Find and delete the user by ID
+    await devuser.findByIdAndDelete(userId);
+    // Return the updated list of users after deletion
+    return res.json(await devuser.find());
+  } catch (err) {
+    console.log(err);
+    return res.status(500).send('Server error');
+  }
+});
+
+
 app.listen(5000,()=> console.log('Server Running'))
