@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="demo/demo/src/main/java"/>
+	<classpathentry kind="src" path="demo/demo/src/test/java"/>
+	<classpathentry kind="src" path="spring/src/main/java"/>
+	<classpathentry kind="src" path="spring/src/test/java"/>
+	<classpathentry kind="src" path="springmvc/src/main/java"/>
+	<classpathentry kind="src" path="springmvc/src/test/java"/>
+	<classpathentry kind="src" path="webdemo/src/main/java"/>
+	<classpathentry kind="src" path="webdemo/src/test/java"/>
+	<classpathentry kind="lib" path="demo/demo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="demo/demo/bin/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="springmvc/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="webdemo/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="demo/demo/target/classes"/>
+</classpath>

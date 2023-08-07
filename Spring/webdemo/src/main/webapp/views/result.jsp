@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    Result is : ${num3}
+    Result is : ${a1}
+
+    Welcomr Back ${name}
 </body>
 </html>
