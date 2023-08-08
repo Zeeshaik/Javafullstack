@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "my first node js program",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "data.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Javafullstack"
+  },
+  "author": "zeeshan shaik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "http": "^0.0.1-security",
+    "nodemailer": "^6.9.4"
+  }
+}
