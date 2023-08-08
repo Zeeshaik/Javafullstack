@@ -1,0 +1,21 @@
+{
+  "name": "zeeshaik",
+  "version": "1.0.0",
+  "description": "express app ",
+  "main": "servers.js",
+  "scripts": {
+    "test": "package.json",
+    "start": "node servers.js",
+    "server": "nodemon servers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Javafullstack"
+  },
+  "author": "zeeshan_shaik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
